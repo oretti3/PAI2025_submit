@@ -44,8 +44,6 @@ def run_lerobot_record(task_name):
         print("エラー: 'python'コマンドが見つかりません。仮想環境が有効になっていますか？")
         
 
-os.environ["GEMINI_API_KEY"] = API_KEY
-
 DEVICE_IDX = 14
 info       = sd.query_devices(DEVICE_IDX, kind='input')
 ORIG_SR    = int(info['default_samplerate'])    # 例: 44100
