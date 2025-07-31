@@ -1,9 +1,8 @@
 # ちんちろロボ (Chinchiro Robo) - 音声で対話するマルチモーダル・マニピュレーションロボット
 
-[![ちんちろロボ デモ](https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID)
-*(画像をクリックするとデモ動画を再生します。YOUR_YOUTUBE_VIDEO_IDを実際の動画IDに置き換えてください)*
-
 本プロジェクトは、Physical AI講座の最終課題として制作した、音声対話を通じて操作可能なマルチモーダル・マニピュレーションロボットです。ユーザーが「サイコロを振って」と話しかけるだけで、ロボットがその意図を理解し、実際にサイコロを振る一連の動作を実行します。
+
+# 現在整備中
 
 ## 概要
 
@@ -17,8 +16,7 @@
 
 本システムの処理フローは以下の通りです。
 
-![システム概要図](https://raw.githubusercontent.com/your_username/your_repository_name/main/path/to/your/diagram.png)
-*(ここにレポートにあるシステム概要図の画像をリポジトリにアップロードし、そのURLにリンクを書き換えてください)*
+![システム概要図](https://raw.githubusercontent.com/oretti3/PAI2025_submit/bin/system_img.png)
 
 1. ユーザーが音声で指示を出す。
 2. **Faster-Whisper** が音声をテキストに変換。
@@ -55,7 +53,7 @@
 （ここに `export` コマンドが入ります）
 
 ### 5. ハードウェアのセットアップ
-- **ロボットアーム**: `myCobot 280 (so101)` をリーダーアーム・フォロワーアームとして2台使用します。
+- **ロボットアーム**: `so-101` をリーダーアーム・フォロワーアームとして2台使用します。
   - フォロワーアーム: `/dev/ttyACM0`
   - リーダーアーム: `/dev/ttyACM1`
 - **カメラ**:
