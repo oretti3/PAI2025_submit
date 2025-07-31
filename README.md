@@ -14,7 +14,7 @@
 
 本システムの処理フローは以下の通りです。
 
-![システム概要図](https://raw.githubusercontent.com/oretti3/PAI2025_submit/bin/system_img.png)
+![システム概要図](https://github.com/oretti3/PAI2025_submit/blob/main/bin/system_img.png?raw=true)
 
 1. ユーザーが音声で指示を出す。
 2. **Faster-Whisper** が音声をテキストに変換。
@@ -123,7 +123,7 @@ python -m lerobot.record \
   --dataset.episode_time_s=30 \
   --dataset.reset_time_s=5 \
   --dataset.num_episodes=10 \
-  --dataset.single_task="Play roll dice" \
+  --dataset.single_task="Let's play with dice" \
   --resume=true
 ```
 
@@ -150,12 +150,12 @@ python -m lerobot.record \
   --robot.port=/dev/ttyACM1 \
   --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, sub: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
   --display_data=true \
+  --dataset.push_to_hub=false \
   --dataset.repo_id=${HF_USER}/eval_so101_dice_5 \
   --policy.path=${HF_USER}/so101_dice_5_smolvla_policy1 \
   --dataset.episode_time_s=30 \
   --dataset.num_episodes=1 \
-  --dataset.push_to_hub=false \
-  --dataset.single_task="Play roll dice" \
+  --dataset.single_task="Let's play with dice" \
   --resume=true
 ```
 
@@ -173,6 +173,7 @@ python -m lerobot.record \
 ```bash
 mkdir analysis_results
 mkdir pretrained_model
+
 wget https://huggingface.co/oretti/so101_dice_3_act_policy1/raw/main/config.json -O ./pretrained_model/config.json
 wget https://huggingface.co/oretti/so101_dice_3_act_policy1/raw/main/train_config.json -O ./pretrained_model/train_config.json
 wget https://huggingface.co/oretti/so101_dice_3_act_policy1/resolve/main/model.safetensors -O ./pretrained_model/model.safetensors
