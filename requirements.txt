@@ -1,0 +1,6 @@
+sounddevice
+numpy
+librosa
+faster-whisper
+google-generativeai
+keyboard
